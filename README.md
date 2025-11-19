@@ -1,4 +1,4 @@
-# Big Bang - Test
+# Big Bang
 
 Big Bang is a declarative, continuous delivery tool for deploying Department of Defense (DoD) hardened and approved packages into a Kubernetes cluster.
 
