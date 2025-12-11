@@ -324,14 +324,8 @@ istio:
   mtls:
     # -- STRICT = Allow only mutual TLS traffic,
     # PERMISSIVE = Allow both plain text and mutual TLS traffic
-    # -- SC-8 COMPLIANCE: STRICT mode enforces cryptographic protection for all
-    # -- service-to-service communications per NIST 800-53 SC-8. This configuration:
-    # --   - Encrypts all mesh traffic using mTLS with AES-256-GCM
-    # --   - Provides SHA-384 integrity verification via TLS MACs
-    # --   - Ensures zero plaintext transmission within the service mesh
-    # --   - Complies with FedRAMP High transmission confidentiality requirements
-    # -- Last verified: 2025-12-11 for Big Bang v2.x platform
-    mode: STRICT
+    # -- SC-8 NOTE: PERMISSIVE mode allows plaintext - partial SC-8 compliance only
+    mode: PERMISSIVE
 
   # -- Choose source type of "git" or "helmRepo"
   sourceType: "git"
