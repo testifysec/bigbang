@@ -324,6 +324,10 @@ istio:
   mtls:
     # -- STRICT = Allow only mutual TLS traffic,
     # PERMISSIVE = Allow both plain text and mutual TLS traffic
+    # -- SC-8 COMPLIANCE: STRICT mode enforces cryptographic protection for
+    # -- all transmission confidentiality and integrity per NIST 800-53 SC-8.
+    # -- This configuration ensures all service-to-service communication uses
+    # -- mutual TLS with AES-256-GCM encryption and SHA-384 integrity verification.
     mode: STRICT
 
   # -- Choose source type of "git" or "helmRepo"
